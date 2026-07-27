@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberShield | Threats</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+background:#0A192F;
+color:white;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+header{
+background:#112240;
+padding:20px 8%;
+position:sticky;
+top:0;
+z-index:100;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:#64FFDA;
+transition:.3s;
+cursor:pointer;
+}
+
+.logo:hover{
+    transform:scale(1.05);
+    text-shadow:0 0 15px #64FFDA;
+}
+
+.logo i{
+margin-right:8px;
+}
+
+
+nav ul{
+display:flex;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav ul li{
+margin-left:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:.3s;
+}
+
+nav ul li a.active{
+color:#64FFDA !important;
+font-weight:bold;
+border-bottom:2px solid #64FFDA;
+padding-bottom:4px;
+}
+
+nav ul li a:hover{
+color:#64FFDA;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:60px 8%;
+background:linear-gradient(135deg,#112240,#0A192F);
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:15px;
+}
+
+.hero span{
+color:#64FFDA;
+}
+
+.hero p{
+max-width:700px;
+margin:auto;
+color:#d1d5db;
+line-height:1.7;
+}
+
+/* TITLE */
+
+.section-title{
+text-align:center;
+font-size:32px;
+color:#64FFDA;
+margin:50px 0 30px;
+}
+
+/* THREATS */
+
+.threats{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+gap:25px;
+padding:0 8%;
+}
+
+.threat-card{
+background:#112240;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(100,255,218,0.15);
+transition:.3s;
+}
+
+.threat-card:hover{
+    transform:translateY(-10px);
+    border-color:#64FFDA;
+    box-shadow:0 0 25px rgba(100,255,218,0.2);
+}
+
+.threat-card h3{
+color:#64FFDA;
+margin-bottom:12px;
+}
+
+.threat-card p{
+color:#d1d5db;
+line-height:1.7;
+margin-bottom:10px;
+}
+
+.threat-card ul{
+padding-left:20px;
+color:#d1d5db;
+}
+
+.threat-card li{
+margin-bottom:6px;
+}
+
+/* TIMELINE */
+
+.timeline{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+gap:15px;
+padding:0 8%;
+}
+
+.step{
+background:#112240;
+padding:20px;
+border-radius:15px;
+text-align:center;
+}
+
+.step i{
+font-size:30px;
+color:#64FFDA;
+margin-bottom:10px;
+}
+
+/* CYBER TIMELINE */
+
+.timeline-history{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:0 8%;
+}
+
+.event{
+background:#112240;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(100,255,218,0.15);
+transition:.3s;
+}
+
+.event:hover{
+transform:translateY(-10px);
+border-color:#64FFDA;
+box-shadow:0 0 25px rgba(100,255,218,0.2);
+}
+
+.year{
+display:inline-block;
+background:#64FFDA;
+color:#0A192F;
+font-weight:bold;
+padding:6px 12px;
+border-radius:20px;
+margin-bottom:12px;
+}
+
+.event h3{
+color:#64FFDA;
+margin-bottom:10px;
+}
+
+.event p{
+color:#d1d5db;
+line-height:1.6;
+}
+/* CYBER TIMELINE */
+
+.timeline-history{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+padding:0 8%;
+}
+
+.event{
+background:#112240;
+padding:25px;
+border-radius:15px;
+border:1px solid rgba(100,255,218,0.15);
+transition:.3s;
+}
+
+.event:hover{
+transform:translateY(-10px);
+border-color:#64FFDA;
+box-shadow:0 0 25px rgba(100,255,218,0.2);
+}
+
+.year{
+display:inline-block;
+background:#64FFDA;
+color:#0A192F;
+font-weight:bold;
+padding:6px 12px;
+border-radius:20px;
+margin-bottom:12px;
+}
+
+.event h3{
+color:#64FFDA;
+margin-bottom:10px;
+}
+
+.event p{
+color:#d1d5db;
+line-height:1.6;
+}
+
+/* INFO */
+
+.info{
+background:#112240;
+margin:50px 8%;
+padding:30px;
+border-radius:15px;
+text-align:center;
+}
+
+.info h2{
+color:#64FFDA;
+margin-bottom:10px;
+}
+
+.info p{
+color:#d1d5db;
+line-height:1.7;
+}
+
+/* FOOTER */
+
+footer{
+background:black;
+padding:25px;
+text-align:center;
+margin-top:40px;
+}
+
+footer h3{
+color:#64FFDA;
+margin-bottom:10px;
+}
+
+footer p{
+color:#d1d5db;
+font-size:14px;
+}
+
+/* SCROLL REVEAL */
+
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all .8s ease;
+}
+
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+
+<div class="logo">
+<i class="fas fa-shield-alt"></i> CyberShield
+</div>
+
+<ul>
+<li><a href="/Cybershield/index.php">Home</a></li>
+<li><a href="/Cybershield/threats.html" class="active">Threats</a></li>
+<li><a href="/Cybershield/tips.html">Tips</a></li>
+<li><a href="/Cybershield/tools.html">Tools</a></li>
+<li><a href="/Cybershield/quiz.php">Quiz</a></li>
+<li><a href="/Cybershield/resources.html">Resources</a></li>
+<li><a href="/Cybershield/contact.php">Contact</a></li>
+</ul>
+
+</nav>
+</header>
+
+<section class="hero reveal">
+<h1>Cybershield <span> Threat Intelligence</span></h1>
+<p>
+Learn about common cyber threats and understand how attackers target
+users, systems, and online services.
+</p>
+</section>
+
+<h2 class="section-title">Major Threats</h2>
+
+<section class="threats">
+
+<div class="threat-card reveal">
+<h3>🎣 Phishing</h3>
+<p>Fraudulent emails, messages, and websites designed to steal personal information.</p>
+<ul>
+<li>Check sender details</li>
+<li>Avoid suspicious links</li>
+<li>Never share OTPs</li>
+</ul>
+</div>
+
+<div class="threat-card reveal">
+<h3>🦠 Malware</h3>
+<p>Viruses, worms, trojans, and spyware that infect devices and steal data.</p>
+<ul>
+<li>Use antivirus software</li>
+<li>Update your system</li>
+<li>Download from trusted sources</li>
+</ul>
+</div>
+
+<div class="threat-card reveal">
+<h3>🔒 Ransomware</h3>
+<p>Encrypts files and demands payment to restore access.</p>
+<ul>
+<li>Create backups</li>
+<li>Update software</li>
+<li>Avoid unknown attachments</li>
+</ul>
+</div>
+
+<div class="threat-card reveal">
+<h3>👤 Social Engineering</h3>
+<p>Attackers manipulate victims into revealing confidential information.</p>
+<ul>
+<li>Verify requests</li>
+<li>Stay alert</li>
+<li>Protect personal data</li>
+</ul>
+</div>
+
+<div class="threat-card reveal">
+<h3>🔑 Password Attacks</h3>
+<p>Hackers use stolen or weak passwords to access accounts.</p>
+<ul>
+<li>Use strong passwords</li>
+<li>Enable 2FA</li>
+<li>Don't reuse passwords</li>
+</ul>
+</div>
+
+<div class="threat-card reveal">
+<h3>🌐 DDoS Attacks</h3>
+<p>Overloads websites and servers with massive traffic.</p>
+<ul>
+<li>Use firewalls</li>
+<li>Monitor traffic</li>
+<li>Use DDoS protection</li>
+</ul>
+</div>
+
+</section>
+
+<h2 class="section-title">Attack Lifecycle</h2>
+
+<section class="timeline">
+
+<div class="step reveal">
+<i class="fas fa-search"></i>
+<h4>Recon</h4>
+</div>
+
+<div class="step reveal">
+<i class="fas fa-paper-plane"></i>
+<h4>Delivery</h4>
+</div>
+
+<div class="step reveal">
+<i class="fas fa-unlock"></i>
+<h4>Exploit</h4>
+</div>
+
+<div class="step reveal">
+<i class="fas fa-download"></i>
+<h4>Install</h4>
+</div>
+
+<div class="step reveal">
+<i class="fas fa-skull-crossbones"></i>
+<h4>Attack</h4>
+</div>
+
+<div class="step reveal">
+<i class="fas fa-database"></i>
+<h4>Data Theft</h4>
+</div>
+
+</section>
+
+<h2 class="section-title">Cyber Timeline</h2>
+
+<section class="timeline-history">
+
+<div class="event reveal">
+<div class="year">2010</div>
+<h3>Stuxnet Worm</h3>
+<p>A sophisticated malware that targeted industrial control systems and became one of the most famous cyber weapons.</p>
+</div>
+
+<div class="event reveal">
+<div class="year">2017</div>
+<h3>WannaCry Ransomware</h3>
+<p>A global ransomware attack that infected hundreds of thousands of computers across more than 150 countries.</p>
+</div>
+
+<div class="event reveal">
+<div class="year">2018</div>
+<h3>Facebook Data Breach</h3>
+<p>Millions of users were affected when personal data was improperly accessed and exposed.</p>
+</div>
+
+<div class="event reveal">
+<div class="year">2020</div>
+<h3>Twitter Bitcoin Hack</h3>
+<p>Several high-profile accounts were compromised and used to promote cryptocurrency scams.</p>
+</div>
+
+<div class="event reveal">
+<div class="year">2021</div>
+<h3>Colonial Pipeline Attack</h3>
+<p>A ransomware attack disrupted fuel distribution and highlighted risks to critical infrastructure.</p>
+</div>
+
+<div class="event reveal">
+<div class="year">2024</div>
+<h3>CDK Global Ransomware Incident</h3>
+<p>A major ransomware attack impacted automotive dealerships and business operations.</p>
+</div>
+
+</section>
+
+<section class="info reveal">
+<h2>Why Threat Awareness Matters</h2>
+<p>
+Understanding cyber threats helps users recognize risks, avoid scams,
+and protect sensitive information from attackers.
+</p>
+</section>
+
+<footer class="reveal">
+<h3>CyberShield</h3>
+<p>Stay Safe. Stay Smart. Stay Secure.</p>
+<p>© 2026 CyberShield. All Rights Reserved.</p>
+</footer>
+
+<script>
+
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("active");
+
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+reveals.forEach(item=>{
+observer.observe(item);
+});
+
+</script>
+
+</body>
+</html>
