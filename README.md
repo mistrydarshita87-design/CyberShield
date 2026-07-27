@@ -22,3 +22,6 @@ Cybershield is a cyber security awareness website developed using HTML, CSS, Jav
 3. Import the database into phpMyAdmin
 4. Start Apache and MySQL
 5. Open 'http://localhost/CyberShield'
+## Developer
+** Darshita Mistry **
+if you like this project, don't forget to star the repository.
